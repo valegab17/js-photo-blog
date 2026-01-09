@@ -73,17 +73,23 @@ main{
     top: 0;
     min-height: 100vh;
     min-width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.767)
+    background-color: rgba(0, 0, 0, 0.767);
+    text-align: center;
+    display: none;
 }
 
 #img-prov{
     background-color: green;
-    height: 200px;
-    width: 200px;
+    height: 500px;
+    width: 500px;
+    margin: 20px auto;
 
+}
+
+#btn-close{
+   font-size: 1.5rem;
+   padding: 10px;
+   margin: 15px;
 }
 
 

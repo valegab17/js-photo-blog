@@ -3,6 +3,10 @@
 
 //seleziono come prima cosa il contenitore dove mettere le card
 const outputCont = document.getElementById("container");
+//seleziono output del overlay  
+const outputOver  = document.querySelector(".overlay-container");
+//seleziono il btn
+const button = document.getElementById("btn-close");
 
 // endpoint API delle immagini
 const endpoint = "https://lanciweb.github.io/demo/api/pictures/"
@@ -38,3 +42,15 @@ axios.get(endpoint)
         outputCont.innerHTML = picturesOutput;
     })
     .catch(err => console.log(err));
+
+ //add event listener a outputCont cosicché quando user clicca sulle img fa vedere l'overlay
+
+outputCont.addEventListener("click", () => {
+outputOver.style.display = "block"; // mostra overlay
+});
+
+//add eventlistener su btn così da far cambiare di nuovo il display
+
+button.addEventListener("click",() => {
+    outputOver.style.display = "none";
+})
